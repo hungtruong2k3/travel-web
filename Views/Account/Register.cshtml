@@ -1,0 +1,59 @@
+﻿@model WebDayHoc.Models.User
+
+@{
+    ViewData["Title"] = "Đăng ký";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var emailPattern = @"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$";
+}
+
+<div class="container">
+    <div class="row justify-content-center align-items-center" style="height:100vh">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="text-center text-primary">Đăng ký</h2>
+                    <hr />
+                    <form asp-action="Register" onsubmit="return validateEmail();">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="UserName" class="control-label"></label>
+                            <input asp-for="UserName" class="form-control" placeholder="Tên người dùng" />
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="UserEmail" class="control-label"></label>
+                            <input asp-for="UserEmail" class="form-control" placeholder="Email" id="UserEmail" />
+                            <span asp-validation-for="UserEmail" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="UserPassword" class="control-label"></label>
+                            <input asp-for="UserPassword" class="form-control" placeholder="Mật khẩu" />
+                            <span asp-validation-for="UserPassword" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Đăng ký" class="btn btn-primary btn-block" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <a href="/Login">Trở lại</a>
+</div>
+
+<script>
+    var emailPattern = @Html.Raw(Json.Serialize(emailPattern));
+
+    function validateEmail() {
+        var email = document.getElementById('UserEmail');
+        var re = new RegExp(emailPattern);
+        if (!re.test(email.value)) {
+            alert('Vui lòng nhập địa chỉ email hợp lệ');
+            return false;
+        }
+        return true;
+    }
+</script>

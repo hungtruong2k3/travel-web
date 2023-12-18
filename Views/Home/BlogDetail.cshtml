@@ -1,0 +1,60 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Btl.Models.Blog
+<style>
+    body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+h1, h3 {
+    color: #007BFF; /* A nice shade of blue */
+    text-align: left;
+    font-size: 2.5em;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    box-shadow: none;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.8; /* Increased line height */
+    margin: 20px 0;
+    text-align: justify;
+    text-indent: 30px;
+    padding: 0 15px; /* Added horizontal padding */
+}
+
+</style>
+
+<div class="w3-row">
+    <!-- Blog entries -->
+    <div class="w3-col l8 s12">
+        <div class="w3-card-4 w3-margin w3-white">
+            <img src="@Model.BlogImage" alt="Blog Image">
+            <div class="w3-container">
+                <h3><b>@Model.BlogName</b></h3>
+                <h5>Title description, <span class="w3-opacity">may 23, 2023</span></h5>
+            </div>
+            <div class="w3-container">
+                <p>@Model.BlogDescription</p>
+                <div class="w3-row">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

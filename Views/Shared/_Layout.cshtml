@@ -1,0 +1,176 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Creative Studio landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Creative Studio | Free Bootstrap 4.3.x template</title>
+
+    <!-- font icons -->
+    <link rel="stylesheet" href="~/assets/vendors/themify-icons/css/themify-icons.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <!-- Bootstrap + Creative Studio main styles -->
+    <link rel="stylesheet" href="~/assets/css/creative-studio.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+    <!-- update existing v5 CSS to use v6 icons and assets -->
+    <link href="/your-path-to-fontawesome/css/v5-font-face.css" rel="stylesheet" />    
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navigation -->
+    <nav class="navbar custom-navbar navbar-expand-lg navbar-dark" data-spy="affix" data-offset-top="20"style=" background: skyblue;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="~/assets/imgs/Logo-Home.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent"style="color: red";>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" >
+                        <a class="nav-link" href="/Home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">Lịch sử</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Admin">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Đặc sản</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/IndexProduct">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">news</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/Contact">Contact</a>
+                    </li>
+        <li class="nav-item"> 
+           <i b-g49fh8qc8g="" class="fa fa-user" aria-hidden="true" style=" margin-top: 10px;"></i>
+<div class="dropdown custom-dropdown" style="margin-top:-30px;">  
+<a href="#" data-toggle="dropdown" class="align-items-center dropdown-link nav-link " aria-haspopup="true" aria-expanded="false" data-offset="-70, 20">
+Tài khoản
+<span class="arrow icon-keyboard_arrow_down"></span>
+</a>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+<a class="dropdown-item" href="#"> <span class="icon icon-dashboard"></span>
+      @if (User.Identity.IsAuthenticated)
+                                    {
+                          <h6> welcome @User.Identity.Name</h6>
+                          <a href="/Account/Logout"> Logout </a>
+                                    }
+
+    </a>
+
+<hr>
+<h5 class="menu-heading">Account</h5>
+<a class="dropdown-item" href="/Account/Login"><span class="icon icon-comment"></span>Login</a>
+<a class="dropdown-item" href="/Account/Register"><span class="icon icon-lock_outline"></span>Register</a>
+     </li>
+</div>
+</div>
+
+  </div>
+                       
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- End Of Page Navigation -->
+   @RenderBody()
+
+   <section class="has-bg-img py-0">
+        <div class="container">
+            <div class="footer">
+                <div class="footer-lists">
+                    <ul class="list">
+                        <li class="list-head">
+                            <h6 class="font-weight-bold">ABOUT US</h6>
+                        </li>
+                            <p> Đây là web hỗ trợ dạy học lịch sử địa lý địa phương Môn back-end</p> 
+                            <p class="mt-3">
+                                Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a class="d-inline text-primary" href="http://www.devcrud.com">Web By Creative Studio</a>
+                            </p>                   
+                        </>
+                    </ul>
+                    <ul class="list">
+                        <li class="list-head">
+                            <h6 class="font-weight-bold">Link hữu dụng</h6>
+                        </li>
+                        <li class="list-body">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="#about">About</a>
+                                    <a href="/Home/Contact">Contact</a>
+                                    <a href="/Products/ProductListByLocal">Shop</a>
+                            
+                                </div>
+                                <div class="col">
+                                    <a href="#team">Team</a>
+                                    <a href="#blog">Blog</a>
+                                   
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list">
+                        <li class="list-head">
+                            <h6 class="font-weight-bold">Thông tin liên lạc</h6>
+                        </li>
+                        <li class="list-body">
+                            <p>Contact us and we'll get back to you within 24 hours.</p>
+                            <p><i class="ti-location-pin"></i> Ha Long, Quảng Ninh</p>
+                            <p><i class="ti-email"></i>  btl@website.com</p>
+                            <div class="social-links">
+                                <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>
+                                <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>
+                                <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a>
+                                <a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>
+                                <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>
+                                <a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>    
+        </div>
+    </section>
+  
+    <!-- core  -->
+    <script src="~/assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="~/assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap affix -->
+    <script src="~/assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Creative Studio js -->
+    <script src="~/assets/js/creative-studio.js"></script>   
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>

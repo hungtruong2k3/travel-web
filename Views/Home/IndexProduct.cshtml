@@ -1,0 +1,143 @@
+﻿@model IEnumerable<Btl.Models.Product>
+@{
+    ViewData["Title"] = "IndexProduct";
+	Layout = "~/Views/Shared/_DetailView.cshtml";
+}
+<!-- Google font -->
+	<link rel="stylesheet" href="~/assets/vendors/themify-icons/css/themify-icons.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+	<!-- Bootstrap + Creative Studio main styles -->
+	<link rel="stylesheet" href="~/assets/css/creative-studio.css">
+	<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+	<!-- update existing v5 CSS to use v6 icons and assets -->
+	<link href="/your-path-to-fontawesome/css/v5-font-face.css" rel="stylesheet" /> 
+		 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+		 <!-- Bootstrap -->
+		 <link type="text/css" rel="stylesheet" href="~/ProductAssets/css/bootstrap.min.css"/>
+
+		 <!-- Slick -->
+		 <link type="text/css" rel="stylesheet" href="~/ProductAssets/css/slick.css"/>
+		 <link type="text/css" rel="stylesheet" href="~/ProductAssets/css/slick-theme.css"/>
+
+		 <!-- nouislider -->
+		 <link type="text/css" rel="stylesheet" href="~/ProductAssets/css/nouislider.min.css"/>
+
+		 <!-- Font Awesome Icon -->
+		 <link rel="stylesheet" href="~/ProductAssets/css/font-awesome.min.css">
+
+		 <!-- Custom stlylesheet -->
+		 <link type="text/css" rel="stylesheet" href="~/ProductAssets/css/style.css"/>
+
+	<!-- update existing v5 CSS to use v6 icons and assets -->
+	<link href="/your-path-to-fontawesome/~/ProductAssets/css/v5-font-face.css" rel="stylesheet" />
+
+       <div class="col-md-12">
+						<div class="row">
+							<div class="products-tabs">
+								<!-- tab -->
+								<div id="tab2" class="tab-pane fade in active">
+									<div class="products-slick slick-initialized slick-slider" data-nav="#slick-nav-2">
+										<!-- /product -->
+									<div class="slick-list draggable">
+										<div class="slick-track" style="opacity: 1; width: 4500px; transform: translate3d(-1125px, 0px, 0px);">	  </div>
+
+						@foreach (var item in Model)
+						{
+										<div class="product slick-slide slick-current slick-active" tabindex="0" style="width: 345px;" data-slick-index="1" aria-hidden="false">
+												<div class="product-img">
+													<img src="@item.ProductImage" alt="">
+													<div class="product-label">
+														<span class="new">NEW</span>
+													</div>
+												</div>
+												<div class="product-body">
+													<p class="product-category">@item.Local.LocalName</p>
+													<h3 class="product-name"><a href="#" tabindex="0">@item.ProductName</a></h3>
+													<h4 class="product-price">@item.ProductDiscount <del class="product-old-price">@item.ProductPrice</del></h4>
+													<div class="product-rating">
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star-o"></i>
+													</div>
+													<div class="product-btns">
+														<button class="add-to-wishlist" tabindex="0"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
+														<button class="add-to-compare" tabindex="0"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
+															<button class="quick-view" tabindex="0"><i class="fa fa-eye"></i><span class="tooltipp"><a href="~/Products/ProductDetails?id=@item.ProductId">quick view</a></span></button>
+													</div>
+												</div>
+												<div class="add-to-cart">
+														<button class="add-to-cart-btn" tabindex="0"><a href="/Cart/AddToCart/?ProductId=@item.ProductId"><i class="fa fa-shopping-cart"></i></a> add to cart</button>
+												</div>
+
+										
+										</div>
+
+								}
+										</div>
+										<div class="store-filter clearfix">
+					
+						</div>
+										</div>
+										<div class="store-filter clearfix">
+							<div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="/Home/IndexProduct?productPage=1">1</a>
+  <a href="/Home/IndexProduct?productPage=2">2</a>
+  <a href="/Home/IndexProduct?productPage=3">3</a>
+  <a href="/Home/IndexProduct?productPage=4">4</a>
+  <a href="/Home/IndexProduct?productPage=5">5</a>
+  <a href="/Home/IndexProduct?productPage=6">6</a>
+  <a href="#">&raquo;</a>
+</div>
+						</div>
+										</div>
+
+								</div>
+								<!-- /tab -->
+							</div>
+						</div>
+					</div>
+			
+						<style>
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+</style>
+		
+
+
+
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+		<!-- Bootstrap -->
+		<link type="text/css" rel="stylesheet" href="~/ProductAssets/css/bootstrap.min.css"/>
+
+		<!-- Slick -->
+		<link type="text/css" rel="stylesheet" href="~/ProductAssets/css/slick.css"/>
+		<link type="text/css" rel="stylesheet" href="~/ProductAssets/css/slick-theme.css"/>
+
+		<!-- nouislider -->
+		<link type="text/css" rel="stylesheet" href="~/ProductAssets/css/nouislider.min.css"/>
+
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href="~/ProductAssets/css/font-awesome.min.css">
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="~/ProductAssets/css/style.css"/>
+
+	   <script src="~/ProductAssets/jsbootstrap.min.js"></script>
+		<script src="~/ProductAssets/jsslick.min.js"></script>
+		<script src="~/ProductAssets/jsnouislider.min.js"></script>
+		<script src="~/ProductAssets/jsjquery.zoom.min.js"></script>
+		<script src="~/ProductAssets/jsmain.js"></script>

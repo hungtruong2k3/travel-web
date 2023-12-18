@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Btl.Models.Local>
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<nav id="navigation">
+			<!-- container -->
+			<div class="container">
+				<!-- responsive-nav -->
+				<div id="responsive-nav">
+					<!-- NAV -->
+					<ul class="main-nav nav navbar-nav" style="padding: 50px 23px; TEXT-ALIGN: center; display: unset;">	
+				@foreach (var item in Model)
+				{
+						<li><a href="/Products/ProductListByLocal?LocalId=@item.LocalID">@item.LocalName</a></li>
+				}
+
+					</ul>
+					<!-- /NAV -->
+				</div>
+				<!-- /responsive-nav -->
+			</div>
+			<!-- /container -->
+		</nav>

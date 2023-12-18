@@ -1,0 +1,172 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Start your development with Creative Studio landing page.">
+	<meta name="author" content="Devcrud">
+	<title>Creative Studio | Free Bootstrap 4.3.x template</title>
+
+	<!-- font icons -->
+	<link rel="stylesheet" href="~/assets/vendors/themify-icons/css/themify-icons.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+	<!-- Bootstrap + Creative Studio main styles -->
+	<link rel="stylesheet" href="~/assets/css/creative-studio.css">
+	<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+	<!-- update existing v5 CSS to use v6 icons and assets -->
+	<link href="/your-path-to-fontawesome/css/v5-font-face.css" rel="stylesheet" /> 
+		 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+		 <!-- Bootstrap -->
+		 <link type="text/css" rel="stylesheet" href="~/ProductAssets/css/bootstrap.min.css"/>
+
+		 <!-- Slick -->
+		 <link type="text/css" rel="stylesheet" href="~/ProductAssets/css/slick.css"/>
+		 <link type="text/css" rel="stylesheet" href="~/ProductAssets/css/slick-theme.css"/>
+
+		 <!-- nouislider -->
+		 <link type="text/css" rel="stylesheet" href="~/ProductAssets/css/nouislider.min.css"/>
+
+		 <!-- Font Awesome Icon -->
+		 <link rel="stylesheet" href="~/ProductAssets/css/font-awesome.min.css">
+
+		 <!-- Custom stlylesheet -->
+		 <link type="text/css" rel="stylesheet" href="~/ProductAssets/css/style.css"/>
+
+	<!-- update existing v5 CSS to use v6 icons and assets -->
+	<link href="/your-path-to-fontawesome/~/ProductAssets/css/v5-font-face.css" rel="stylesheet" />    
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+	<!-- Page Navigation -->
+	<nav class="navbar custom-navbar navbar-expand-lg navbar-dark" data-spy="affix" data-offset-top="20"style=" background: skyblue;">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				<img src="~/assets/imgs/Logo-Home.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent"style="color: red";>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/Home">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#about">Giới thiệu</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#service">Lịch sử</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/Admin">Admin</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#team">Đặc sản</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/Home/IndexProduct">Shop</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#blog">news</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/Home/Contact">Contact</a>
+					</li>
+					<li class="nav-item">
+						<div class="dropdown custom-dropdown">  
+<a href="#" data-toggle="dropdown" class="align-items-center dropdown-link nav-link " aria-haspopup="true" aria-expanded="false" data-offset="-70, 20" style="padding:15px;">
+Tài khoản
+<span class="arrow icon-keyboard_arrow_down"></span>
+</a>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+<a class="dropdown-item" href="#"> <span class="icon icon-dashboard"></span>
+									@if (User.Identity.IsAuthenticated)
+									{
+								  <h6> welcome @User.Identity.Name</h6>
+								  <a href="/Account/Logout"> Logout </a>
+									}
+
+	</a>
+
+<hr>
+<h5 class="menu-heading">Account</h5>
+<a class="dropdown-item" href="/Account/Login"><span class="icon icon-comment"></span>Login</a>
+<a class="dropdown-item" href="/Account/Register"><span class="icon icon-lock_outline"></span>Register</a>
+	 </li>
+</div>
+</div>
+
+  </div>
+
+
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</nav>
+	@(await Component.InvokeAsync("_Local"))
+
+		<!-- BREADCRUMB -->
+		<div id="breadcrumb" class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /BREADCRUMB -->
+
+		<!-- SECTION -->
+		<div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+			
+					</div>
+					@RenderBody()
+						
+					</div>
+			</div>
+
+					<!-- /ASIDE -->
+
+
+  
+
+  <!-- Vendor JS Files -->
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+<script src="~/ProductAssets/js/jquery.min.js"></script>
+		<script src="~/ProductAssets/js/bootstrap.min.js"></script>
+		<script src="~/ProductAssets/js/slick.min.js"></script>
+		<script src="~/ProductAssets/js/nouislider.min.js"></script>
+		<script src="~/ProductAssets/js/jquery.zoom.min.js"></script>
+
+ <script src="~/Admin/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="~/Admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="~/Admin/vendor/chart.js/chart.min.js"></script>
+  <script src="~/Admin/vendor/echarts/echarts.min.js"></script>
+  <script src="~/Admin/vendor/quill/quill.min.js"></script>
+  <script src="~/Admin/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="~/Admin/vendor/tinymce/tinymce.min.js"></script>
+  <script src="~/Admin/vendor/php-email-form/validate.js"></script>

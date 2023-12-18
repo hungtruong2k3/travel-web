@@ -1,0 +1,90 @@
+﻿@using WebDayHoc.Models
+@model User
+@{
+    ViewData["Title"] = "Đăng nhập";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    var emailPattern = @"^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url("background.jpg");
+            background-size: cover;
+        }
+
+        .login-container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 0 auto;
+            margin-top: 100px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px #000;
+        }
+
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+            .btn:hover {
+                opacity: 0.8;
+            }
+    </style>
+    <script>
+        function validateEmail() {
+            var email = document.getElementById('email');
+            var re = new RegExp(@Html.Raw(Json.Serialize(emailPattern)));
+            if (!re.test(email.value)) {
+                alert('Vui lòng nhập địa chỉ email hợp lệ');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h2 class="text-center">@ViewData["Title"]</h2>
+        @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { onsubmit = "return validateEmail();" }))
+        {
+            if (ViewBag.LoginStatus != null && ViewBag.LoginStatus == 0)
+            {
+                <div class="alert alert-danger">Sai Email hoặc mật khẩu vui lòng nhập lại!</div>
+            }
+            <label for="email"><b>Email</b></label>
+            @Html.TextBoxFor(m => m.UserEmail, new { @class = "form-control", @placeholder = "Nhập Email", @id = "email" })
+
+            <label for="psw"><b>Mật khẩu</b></label>
+            @Html.PasswordFor(m => m.UserPassword, new { @class = "form-control", @placeholder = "Nhập mật khẩu" })
+
+            <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Ghi nhớ tôi
+            </label>
+
+            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+        }
+    </div>
+</body>
+</html>
